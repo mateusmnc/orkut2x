@@ -1,4 +1,4 @@
-# ORKUT2
+# ORKUT2X
 |login|Timeline|New Post|
 |-----|-----|-----|
 |![Login](sc_login.png?raw=true "Login")|![Timeline](sc_timeline.png?raw=true "Timeline")|![New Post](sc_newpost.png?raw=true "New Post")|
