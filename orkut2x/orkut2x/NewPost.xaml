@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="orkut2x.NewPost"
+             Title="Novo Post"
+             Padding="20">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="publishPost" Text="Publicar" Clicked="PublishPost_Clicked"  />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Margin="-20" Padding="10" Orientation="Horizontal"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+            <Frame HorizontalOptions="Center" CornerRadius="20" WidthRequest="40" OutlineColor="{StaticResource TwDarkBlue}" Margin="0" Padding="0" IsClippedToBounds="True" BorderColor="{StaticResource TwDarkBlue}" BackgroundColor="{StaticResource TwDarkBlue}">
+                <Image x:Name="userPic" Source="capi.png"  Aspect="AspectFit"/>
+            </Frame>
+        </StackLayout>
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Label x:Name="username"  HorizontalOptions="FillAndExpand"/>
+            <Editor HeightRequest="100" x:Name="postText" Placeholder="No que você está pensando?" HorizontalOptions="FillAndExpand" />
+            <Frame HorizontalOptions="Center" CornerRadius="25" WidthRequest="240" HeightRequest="240" OutlineColor="{StaticResource TwDarkBlue}" Margin="0" Padding="0" IsClippedToBounds="True" BorderColor="{StaticResource TwDarkBlue}" BackgroundColor="{StaticResource TwDarkBlue}">
+                <Image x:Name="postImage"  Aspect="Fill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+            </Frame>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                <ImageButton x:Name="suricatoSelected" Source="suricato.jpg" HeightRequest="35" WidthRequest="35" Aspect="AspectFill" CornerRadius="10" Clicked="SuricatoSelected_Clicked" HorizontalOptions="End"/>
+                <ImageButton x:Name="horseSelected" Source="cavalo.jpg" HeightRequest="35" WidthRequest="35" Aspect="AspectFill" CornerRadius="10" Clicked="HorseSelected_Clicked" HorizontalOptions="End"/>
+                <ImageButton x:Name="capySelected" Source="capi.png" HeightRequest="35" WidthRequest="35" Aspect="AspectFill" CornerRadius="10" Clicked="CapySelected_Clicked" HorizontalOptions="End"/>
+                <ImageButton x:Name="saturnSelected" Source="saturno.jpg" HeightRequest="35" WidthRequest="35" Aspect="AspectFill" CornerRadius="10" Clicked="SaturnSelected_Clicked" HorizontalOptions="End"/>
+                <ImageButton x:Name="beachSelected" Source="praia.jpg" HeightRequest="35" WidthRequest="35" Aspect="AspectFill" CornerRadius="10" Clicked="BeachSelected_Clicked" HorizontalOptions="End"/>
+                <ImageButton x:Name="capybaraSelected" Source="capivara.jpg" HeightRequest="35" WidthRequest="35" Aspect="AspectFill" CornerRadius="10" Clicked="CapybaraSelected_Clicked" HorizontalOptions="End"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                <Label x:Name="visibilityText" VerticalOptions="Center" Text="privado" HorizontalOptions="Start"/>
+                <Switch x:Name="visibility" Scale="0.7" VerticalOptions="Center" HorizontalOptions="End" Toggled="Visibility_Toggled"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

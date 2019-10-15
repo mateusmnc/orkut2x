@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="orkut2x.App">
+    <Application.Resources>
+        <Color x:Key="TwWhite">#FFFFFF</Color>
+        <Color x:Key="TwGray">#CCD6DD</Color>
+        <Color x:Key="TwRed">#C51F5D</Color>
+        <Color x:Key="TwLightDarkBlue">#243447</Color>
+        <Color x:Key="TwDarkBlue">#141D26</Color>
+        <Color x:Key="TwLightBlue">#1DA1F2</Color>
+
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{StaticResource TwLightDarkBlue}"/>
+            <Setter Property="BarTextColor" Value="{StaticResource TwWhite}"/>
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="{StaticResource TwWhite}"/>
+            <Setter Property="PlaceholderColor" Value="{StaticResource TwGray}"/>
+        </Style>
+
+        <Style TargetType="TabbedPage">
+            <Setter Property="BarBackgroundColor" Value="{StaticResource TwLightDarkBlue}"/>
+            <Setter Property="BarTextColor" Value="{StaticResource TwLightBlue}"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource TwDarkBlue}"/>
+        </Style>
+        
+        <Style TargetType="Editor">
+            <Setter Property="TextColor" Value="{StaticResource TwWhite}"/>
+            <Setter Property="PlaceholderColor" Value="{StaticResource TwGray}"/>
+            <Setter Property="BackgroundColor" Value="{StaticResource TwDarkBlue}"/>
+        </Style>
+
+        <Style TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="{StaticResource TwDarkBlue}"/>
+        </Style>
+        
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource TwWhite}"/>
+        </Style>
+
+        <Style TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{StaticResource TwDarkBlue}"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource TwLightBlue}"/>
+            <Setter Property="BorderColor" Value="{StaticResource TwLightBlue}"/>
+            <Setter Property="TextColor" Value="{StaticResource TwWhite}"/>
+            <Setter Property="CornerRadius" Value="25"/>
+        </Style>
+
+        <Style TargetType="ImageButton">
+            <Setter Property="BackgroundColor" Value="{StaticResource TwDarkBlue}"/>
+            <Setter Property="BorderColor" Value="{StaticResource TwDarkBlue}"/>
+            
+        </Style>
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="orkut2x.AddContacts"
+             Title="Adicionar Amigos">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <ListView x:Name="FriendsList" HasUnevenRows="True" ItemsSource="{ Binding FriendsSource }">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="15">
+                                <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="Start">
+                                    <Frame HorizontalOptions="Center" CornerRadius="20" WidthRequest="40" OutlineColor="{StaticResource TwDarkBlue}" Margin="0" Padding="0" IsClippedToBounds="True" BorderColor="{StaticResource TwDarkBlue}" BackgroundColor="{StaticResource TwDarkBlue}">
+                                        <Image Source="{Binding pic}" WidthRequest="40" Aspect="AspectFit"/>
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Label Text="{Binding user}" HorizontalOptions="Start"/>
+                                </StackLayout>
+
+                                <ImageButton x:Name="addFriend"  Source="addfriend.png" Clicked="AddFriend_Clicked" CommandParameter="{Binding uuid}" HeightRequest="30" WidthRequest="30" HorizontalOptions="End"/>
+
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

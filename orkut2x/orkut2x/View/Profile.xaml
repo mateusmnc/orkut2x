@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="orkut2x.View.Profile">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="50, 0, 50,0">
+            <StackLayout VerticalOptions="CenterAndExpand" Padding="0, 0, 0, 0">
+                <Frame HorizontalOptions="Center" CornerRadius="50" WidthRequest="100" HeightRequest="100" OutlineColor="{StaticResource TwDarkBlue}" Margin="0" Padding="0" IsClippedToBounds="True" BorderColor="{StaticResource TwDarkBlue}" BackgroundColor="{StaticResource TwDarkBlue}">
+                    <Image x:Name="profilePicture" Source="capi.png"  Aspect="AspectFill"/>
+                </Frame>
+
+                <Label x:Name="username" HorizontalOptions="Center" FontSize="Large" Margin="0, 50, 0, 90"/>
+                <Button x:Name="logoutButton" WidthRequest="110" HorizontalOptions="Center" HeightRequest="40" Text="Sair" Clicked="LogoutButton_Clicked"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

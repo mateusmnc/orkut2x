@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="orkut2x.SignUp"
+             Title="Bem-vindo ao Orkut2x">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="50, 0, 50,0">
+            <StackLayout VerticalOptions="CenterAndExpand" Padding="0, 0, 0, 0">
+                <!--<Frame HorizontalOptions="Center" CornerRadius="20" WidthRequest="40" OutlineColor="{StaticResource TwDarkBlue}" Margin="0" Padding="0" IsClippedToBounds="True" BorderColor="{StaticResource TwDarkBlue}" BackgroundColor="{StaticResource TwDarkBlue}">
+                    <ImageButton x:Name="profilePicture" Source="camera.png"  Aspect="AspectFit" Clicked="ProfilePicture_Clicked"/>
+                </Frame>-->
+
+                <Entry x:Name="userField" Placeholder="Usuário"/>
+                <Entry x:Name="passwordField" IsPassword="True" Placeholder="Senha" Margin="0, 0, 0, 0"/>
+                <Entry x:Name="confirmPasswordField" IsPassword="True" Placeholder="Repita a senha" Margin="0, 0, 0, 30"/>
+                <Button x:Name="signUpButton" Text="Criar Conta" Clicked="SignUpButton_Clicked"/>
+
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

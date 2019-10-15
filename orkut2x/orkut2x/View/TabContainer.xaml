@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:nav="clr-namespace:orkut2x.View"
+            x:Class="orkut2x.View.TabContainer"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarItemColor="{StaticResource TwGray}"
+            android:TabbedPage.BarSelectedItemColor="{StaticResource TwLightBlue}"
+            BarBackgroundColor="{StaticResource TwLightDarkBlue}"
+            BackgroundColor="{StaticResource TwDarkBlue}"
+            BarTextColor="{StaticResource TwLightBlue}"
+            NavigationPage.HasBackButton="False">
+
+    <NavigationPage Title="Timeline" Icon="timeline.png">
+        <x:Arguments>
+            <nav:Feed Title="Página Principal"/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Amigos" Icon="friend.png">
+        <x:Arguments>
+            <nav:Friends Title="Meus Amigos" />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Perfil" Icon="user.png">
+        <x:Arguments>
+            <nav:Profile Title="Perfil" />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

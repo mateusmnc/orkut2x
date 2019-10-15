@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:orkut2x"
+             x:Class="orkut2x.MainPage"
+             Title="Orkut2x">
+
+    
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="50, 0, 50,0">
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+            <!-- top controls -->
+        </StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="0, 50, 0, 0">
+            <!-- middle controls - login fiedls and button -->
+            <Entry x:Name="userField" Placeholder="Usuário"/>
+            <Entry x:Name="passwordField" IsPassword="True" Placeholder="Senha" Margin="0, 0, 0, 30"/>
+            <!--<StackLayout Padding="45, 0, 45, 0">-->
+                <Button x:Name="signInButton" HorizontalOptions="Center" HeightRequest="40" WidthRequest="110" Text="Entrar"  Clicked="SignInButton_Clicked"/>
+            <!--</StackLayout>-->
+            
+        </StackLayout>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <!-- bottom controls  -->
+            <Button x:Name="signUpButton" HorizontalOptions="Center" HeightRequest="40" WidthRequest="160" Text="Criar conta"  Margin="0, 0, 0, 30" Clicked="SignUpButton_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+   
+   
+</ContentPage>

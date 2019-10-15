@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="orkut2x.View.Feed">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="newPost" Icon="pencil.png" Text="Novo" Clicked="NewPost_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <ListView x:Name="Posts" HasUnevenRows="True" ItemsSource="{ Binding PostsSource }">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="15">
+                                <StackLayout Orientation="Vertical" VerticalOptions="StartAndExpand">
+                                    <Frame HorizontalOptions="Center" CornerRadius="20" WidthRequest="40" OutlineColor="{StaticResource TwDarkBlue}" Margin="0" Padding="0" IsClippedToBounds="True" BorderColor="{StaticResource TwDarkBlue}" BackgroundColor="{StaticResource TwDarkBlue}">
+                                        <Image HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="{StaticResource TwDarkBlue}" Source="{Binding pic}" Aspect="AspectFill"/>
+                                    </Frame>
+                                        
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding publisher}" HorizontalOptions="Start"/>
+                                    <Label LineBreakMode="WordWrap" Text="{Binding text}" HorizontalOptions="FillAndExpand"/>
+                                    <Frame HorizontalOptions="Center" CornerRadius="25" WidthRequest="260" HeightRequest="260" OutlineColor="{StaticResource TwDarkBlue}" Margin="0" Padding="0" IsClippedToBounds="True" BorderColor="{StaticResource TwDarkBlue}" BackgroundColor="{StaticResource TwDarkBlue}">
+                                        <Image  x:Name="postImage" Source="{Binding image}" BackgroundColor="Black" Aspect="Fill"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                    </Frame>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" IsVisible="{Binding isShared}">
+                                            <Label TextColor="{StaticResource TwLightBlue}" Text="compartilhado de" HorizontalOptions="Start"/>
+                                            <Label TextColor="{StaticResource TwLightBlue}" Text="{Binding author}"  HorizontalOptions="Start"/>
+                                        </StackLayout>
+                                        <ImageButton Aspect="Fill" x:Name="shareBtn" Clicked="ShareBtn_Clicked" CommandParameter="{Binding uuid}" Source="share.png" IsVisible="{Binding isPublic}" HeightRequest="20" WidthRequest="20" HorizontalOptions="End" BackgroundColor="{StaticResource TwDarkBlue}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
