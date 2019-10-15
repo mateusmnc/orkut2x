@@ -1,8 +1,11 @@
 # ORKUT2
-|login|Timeline|New Post|My friends|Add friends|
-|-----|-----|-----|-----|-----|
-|![Login](sc_login.png?raw=true "Login")|![Timeline](sc_timeline.png?raw=true "Timeline")|![New Post](sc_newpost.png?raw=true "New Post")|![My friends](sc_myfriends.png?raw=true "My friends")|![Add friends](sc_addfriends.png?raw=true "Add friends")|
+|login|Timeline|New Post|
+|-----|-----|-----|
+|![Login](sc_login.png?raw=true "Login")|![Timeline](sc_timeline.png?raw=true "Timeline")|![New Post](sc_newpost.png?raw=true "New Post")|
 
+|My friends|Add friends|Profile|
+|-----|-----|-----|
+|![My friends](sc_myfriends.png?raw=true "My friends")|![Add friends](sc_addfriends.png?raw=true "Add friends")|![Profile](sc_profile.png?raw=true "Profile")
 ## Developed using Xamarin
 
 Inspered in twitter usability it covers the following functionalities:
